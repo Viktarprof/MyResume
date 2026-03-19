@@ -1,0 +1,60 @@
+.inputName,
+.inputEmail,
+.inputPhone,
+.inputMessage {
+  width: 550px;
+  max-width: 100%; // чтобы не вылезали за контейнер
+  height: 55px;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #5555552f;
+  font-size: 15px;
+  color: #555;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--mainColor);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+@media (max-width: 992px) {
+  .inputName,
+  .inputEmail,
+  .inputPhone,
+  .inputMessage {
+    width: 450px;
+    height: 50px;
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputName,
+  .inputEmail,
+  .inputPhone,
+  .inputMessage {
+    width: 100%;
+    height: 45px;
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputName,
+  .inputEmail,
+  .inputPhone,
+  .inputMessage {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    padding: 8px;
+  }
+}

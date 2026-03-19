@@ -1,0 +1,55 @@
+.textareaMessage,
+.textareaMessageSent {
+  width: 550px;
+  max-width: 100%; // подстраивается под контейнер
+  height: 150px;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #5555552f;
+  font-size: 15px;
+  color: #555;
+  transition: all 0.3s ease;
+  resize: vertical; // разрешаем менять высоту
+
+  &:focus {
+    outline: none;
+    border-color: var(--mainColor);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+.textareaMessageSent::placeholder {
+  color: var(--mainColor);
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 992px) {
+  .textareaMessage,
+  .textareaMessageSent {
+    width: 450px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textareaMessage,
+  .textareaMessageSent {
+    width: 100%;
+    height: 130px;
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textareaMessage,
+  .textareaMessageSent {
+    height: 120px;
+    font-size: 13px;
+    padding: 10px;
+  }
+}

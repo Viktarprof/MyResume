@@ -1,0 +1,56 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #716fff;
+  --iaActive: rgb(255, 111, 145);
+  --black: rgb(51, 51, 51);
+  --fotterText: rgb(130, 133, 173);
+  --fotterBack: rgb(7, 9, 28);
+  --logoColor: rgb(249, 249, 249);
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, a, span, ul, input, textarea, div {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+  padding-top: 100px;
+  text-align: center;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)),
+    url(./assets/main-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+
+input, textarea, button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

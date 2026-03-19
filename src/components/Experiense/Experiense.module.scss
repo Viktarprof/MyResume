@@ -1,0 +1,119 @@
+
+.experiense {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(10px, 3vw, 30px);
+}
+
+.experienseContainer {
+  // width: clamp(300px, 90%, 1200px);
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2.5vw, 20px);
+  flex-wrap: wrap;
+}
+
+.achivementsList {
+  width: clamp(300px, 95%, 1200px);
+  height: auto;
+  margin-top: clamp(20px, 5vw, 50px);
+  padding: clamp(10px, 2vw, 20px);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: left;
+  gap: clamp(10px, 2.5vw, 20px);
+}
+
+.achivementsItem {
+  position: relative;
+  width: clamp(200px, 20vw, 300px);
+  height: clamp(150px, 15vw, 200px);
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: clamp(15px, 2vw, 25px);
+  backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 1.5s cubic-bezier(0, 0.36, 0.26, 1.5);
+}
+
+.front {
+  background: #fff;
+  color: black;
+  padding: clamp(5px, 2vw, 10px);
+  gap: clamp(5px, 1.5vw, 10px);
+
+  box-shadow: inset 0px 0px 35px rgba(175, 174, 174, 0.2),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.6),
+    0px 0px 20px rgba(154, 154, 154, 0.25),
+    0px 0px 20px rgba(255, 255, 255, 0.9);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: clamp(5px, 1vw, 10px);
+    right: clamp(5px, 1vw, 10px);
+    width: clamp(20px, 5vw, 40px);
+    height: clamp(20px, 5vw, 40px);
+    transform: rotate(10deg);
+    background-image: url("../../assets/elements/designsClose.png");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: clamp(5px, 1vw, 10px);
+    left: clamp(20px, 5vw, 35px);
+    width: clamp(15px, 5vw, 30px);
+    height: clamp(25px, 8vw, 50px);
+    transform: rotate(60deg);
+    background-image: url("../../assets/elements/designsDot2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.back {
+  background: var(--mainColor);
+  color: #fff;
+  transform: rotateY(180deg);
+
+  box-shadow: inset 0px 0px 35px rgba(175, 174, 174, 0.2),
+    0px 0px 40px rgba(186, 186, 186, 0.405),
+    0px 0px 60px rgba(155, 155, 155, 0.392),
+    inset 0px 0px 40px rgba(255, 255, 255, 0.635);
+}
+
+.title {
+  font-size: clamp(16px, 2.5vw, 25px);
+  color: var(--mainColor);
+}
+
+.achivementsItem:hover .front {
+  transform: rotateY(180deg) translateZ(clamp(5px, 1vw, 15px));
+}
+
+.achivementsItem:hover .back {
+  transform: rotateY(360deg) translateZ(clamp(5px, 1vw, 15px));
+}
+
+.front p,
+.back p {
+  font-size: clamp(13px, 2vw, 15px);
+  text-align: center;
+}

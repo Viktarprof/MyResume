@@ -1,0 +1,342 @@
+// .about {
+//   margin: 70px 0 100px 0;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+
+//   .aboutContainer {
+//     display: flex;
+//     align-items: flex-start;
+//     justify-content: center;
+//     gap: 30px;
+//     flex-wrap: wrap; // для адаптивности
+//   }
+
+//   .aboutDetail {
+//     width: 660px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: space-between;
+//     gap: 10px;
+//     text-align: left;
+
+//     h4 {
+//       font-size: 25px;
+//     }
+
+//     p {
+//       margin-bottom: 15px;
+//       font-size: 23px;
+//       color: #555;
+//       font-weight: 200;
+//       line-height: 28px;
+//     }
+//   }
+
+//   .aboutList {
+//     width: 100%;
+//     padding: 0;
+//     margin: 0;
+//     font-family: "Cabin", sans-serif;
+
+//     li {
+//       padding: 8px 0;
+//       display: grid;
+//       grid-template-columns: 140px 20px 1fr;
+//       align-items: center;
+//       border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+//       font-size: 20px;
+
+//       &:first-child {
+//         border-top: 1px dashed rgba(0, 0, 0, 0.3);
+//       }
+
+//       .value {
+//         font-weight: 200;
+//       }
+//     }
+//   }
+
+//   .skillsContainer {
+//     width: 660px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     gap: 15px;
+
+//     .skillItem {
+//       width: 300px;
+//       height: 240px;
+//       border-radius: 20px;
+//       background-color: #fff;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-around;
+//       align-items: center;
+//       position: relative;
+//       overflow: hidden;
+//       padding: 10px;
+
+//       p {
+//         font-weight: 200;
+//         font-size: 20px;
+//       }
+
+//       .progressCircle {
+//         position: relative;
+//         width: 70px;
+//         height: 70px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border-radius: 50%;
+//         background: conic-gradient(#ddd 0deg, #ddd 360deg);
+
+//         &::before {
+//           content: "";
+//           position: absolute;
+//           inset: 0;
+//           border-radius: 50%;
+//           background: conic-gradient(
+//             var(--circleColor) var(--progress),
+//             transparent 0
+//           );
+//         }
+
+//         &::after {
+//           content: "";
+//           position: absolute;
+//           inset: 6px;
+//           border-radius: 50%;
+//           background: #fff;
+//         }
+
+//         span {
+//           z-index: 1;
+//           font-weight: 600;
+//           font-size: 18px;
+//           color: var(--mainColor);
+//         }
+//       }
+//     }
+//   }
+
+//   @media (max-width: 1100px) {
+//     .aboutDetail {
+//       width: 550px;
+
+//       h4 {
+//         font-size: 22px;
+//       }
+
+//       p {
+//         font-size: 20px;
+//         line-height: 26px;
+//       }
+//     }
+
+//     .skillsContainer {
+//       width: 550px;
+
+//       .skillItem {
+//         width: 250px;
+//         height: 220px;
+//       }
+//     }
+//   }
+
+//   @media (max-width: 992px) {
+//     .aboutContainer {
+//       flex-direction: column;
+//       align-items: center;
+//       text-align: center;
+//     }
+
+//     .aboutDetail {
+//       width: 90%;
+//       align-items: center;
+//       text-align:justify;
+//     }
+//     .skillItem {
+//       height: auto;
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     margin: 50px 0;
+
+//     .aboutDetail {
+//       p {
+//         font-size: 18px;
+//         line-height: 24px;
+//       }
+//     }
+
+//     .skillsContainer {
+//       gap: 10px;
+
+//       .skillItem {
+//         width: 95%;
+//         padding: 15px;
+//         gap: 10px;
+//       }
+//     }
+//     .label {
+//       text-align: left;
+//     }
+//   }
+
+//   @media (max-width: 480px) {
+//     .aboutDetail {
+//       width: 95%;
+//       padding: 0 10px;
+
+//       h4 {
+//         font-size: 18px;
+//       }
+
+//       p {
+//         font-size: 16px;
+//         line-height: 22px;
+//       }
+//     }
+
+//     .skillsContainer {
+//       width: 95%;
+//       gap: 8px;
+
+//       .skillItem {
+//         padding: 10px;
+//       }
+//     }
+//   }
+// }
+
+
+.about {
+  margin: clamp(50px, 6vw, 70px) 0 clamp(60px, 8vw, 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .aboutContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+  }
+
+  .aboutDetail {
+    width: clamp(300px, 80%, 660px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+
+    h4 {
+      font-size: clamp(18px, 2.5vw, 25px);
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: clamp(16px, 2.2vw, 23px);
+      color: #555;
+      font-weight: 200;
+      line-height: clamp(22px, 2.5vw, 28px);
+    }
+  }
+
+  .aboutList {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+
+    li {
+      padding: 8px 0;
+      display: grid;
+      grid-template-columns: clamp(100px, 20vw, 140px) 20px 1fr;
+      align-items: center;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+      font-size: clamp(16px, 2vw, 20px);
+
+      &:first-child {
+        border-top: 1px dashed rgba(0, 0, 0, 0.3);
+      }
+
+      .value {
+        font-weight: 200;
+      }
+    }
+  }
+
+  .skillsContainer {
+    width: clamp(300px, 80%, 660px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 15px);
+
+    .skillItem {
+      width: clamp(240px, 45%, 300px);
+      height: clamp(200px, 30vw, 240px);
+      border-radius: 20px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: clamp(10px, 2vw, 15px);
+
+      p {
+        font-weight: 200;
+        font-size: clamp(16px, 2vw, 20px);
+      }
+
+      .progressCircle {
+        position: relative;
+        width: clamp(60px, 8vw, 70px);
+        height: clamp(60px, 8vw, 70px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: conic-gradient(#ddd 0deg, #ddd 360deg);
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          background: conic-gradient(
+            var(--circleColor) var(--progress),
+            transparent 0
+          );
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 6px;
+          border-radius: 50%;
+          background: #fff;
+        }
+
+        span {
+          z-index: 1;
+          font-weight: 600;
+          font-size: clamp(14px, 2vw, 18px);
+          color: var(--mainColor);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.projects {
+  margin-top: clamp(20px, 5vw, 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: clamp(15px, 3vw, 30px);
+  justify-items: stretch;
+  padding: clamp(20px, 5vw, 40px) 0;
+  width: 100%;
+  max-width: clamp(600px, 90%, 1200px);
+  transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: scale(0.95) translateY(clamp(10px, 2vw, 20px));
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.projectsItem {
+  width: 100%; 
+  min-height: clamp(200px, 25vw, 300px);
+  background: #ffffff;
+  border-radius: clamp(15px, 2vw, 25px);
+  box-shadow: inset 0 0 25px rgba(200, 200, 200, 0.2),
+    5px 5px 20px rgba(0, 0, 0, 0.15), -5px -5px 20px rgba(255, 255, 255, 0.8);
+  padding: clamp(15px, 3vw, 25px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectsItem:hover {
+  background: var(--mainColor);
+  color: white;
+  box-shadow: 0 clamp(10px, 3vw, 15px) clamp(15px, 5vw, 25px) rgba(0, 0, 0, 0.3),
+    inset 0 0 clamp(20px, 5vw, 40px) rgba(255, 255, 255, 0.2);
+}
+
+.projectsItem h4 {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: clamp(5px, 2vw, 10px);
+  transition: color 0.4s ease;
+}
+
+.projectsItem p {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  text-align: justify;
+  line-height: 1.4;
+  color: #444;
+  transition: color 0.4s ease;
+}
+
+.detail {
+  width: clamp(250px, 90%, 550px);
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 20px);
+  text-align: left;
+  transition: color 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.detail img {
+  height: clamp(140px, 15vw, 180px);
+  object-fit: cover;
+  border-radius: clamp(10px, 2vw, 15px);
+  margin: clamp(5px, 1.5vw, 10px) 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.detail ul {
+  width: 100%;
+  list-style: none;
+  font-size: clamp(14px, 2vw, 20px);
+  padding: 0;
+  margin: 0;
+}
+
+.detail li {
+  padding: clamp(2px, 1vw, 5px) 0;
+}
+
+.detail li span {
+  color: inherit;
+  font-weight: bold;
+  font-size: clamp(15px, 3vw, 25px);
+}
+
+.projectLink {
+  width: clamp(100px, 25%, 150px);
+  color: var(--mainColor);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  word-break: keep-all;
+}
+
+.projectsItem:hover .projectLink {
+  color: #ffffff;
+}
+
+.sortBtbs {
+  margin-bottom: clamp(20px, 5vw, 40px);
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 5vw, 50px);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+  .projectsList {
+    grid-template-columns: 1fr;
+  }
+}

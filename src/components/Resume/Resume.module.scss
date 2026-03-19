@@ -1,0 +1,152 @@
+.resumeSection {
+  h3 {
+    margin-bottom: 50px;
+    font-size: 23px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+  }
+}
+
+.resumeList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.resumeItem {
+  position: relative;
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+
+  h4 {
+    text-align: left;
+    font-size: 17px;
+
+    span {
+      color: var(--mainColor);
+    }
+  }
+
+  .description {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 200;
+    color: #555;
+    line-height: 1.8;
+  }
+
+  .period {
+    position: absolute;
+    top: -15px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: #7d7b7b;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .period {
+    background: var(--iaActive);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.213);
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .resumeSection{
+    width: 1000px;
+  }
+  .resumeItem {
+    width: 95%;
+    padding: 35px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .resumeSection h3 {
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
+  .resumeSection{
+    width: 800px;
+    h3{
+      font-size: 25px;
+    }
+  }
+
+  .resumeItem {
+    width: 100%;
+    padding: 35px;
+
+    .description {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .resumeSection{
+    width: 500px;
+  }
+  .resumeItem {
+    padding: 30px;
+    .description {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    .period {
+      font-size: 14px;
+      padding: 8px 12px;
+      top: -20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .resumeSection{
+    width: 390px;
+  }
+  .resumeSection h3 {
+    font-size: 25px;
+  }
+
+  .resumeItem {
+    padding: 15px;
+    border-radius: 10px;
+    gap: 8px;
+    width: 100%;
+
+    .description {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: 15px;
+    }
+
+    .period {
+      font-size: 13px;
+      padding: 6px 10px;
+      top: -20px;
+    }
+  }
+}
+
