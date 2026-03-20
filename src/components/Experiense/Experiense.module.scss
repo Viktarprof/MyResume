@@ -22,7 +22,7 @@
   padding: clamp(10px, 2vw, 20px);
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   justify-items: left;
   gap: clamp(10px, 2.5vw, 20px);
 }
@@ -38,7 +38,8 @@
 .front,
 .back {
   position: absolute;
-  width: 100%;
+  // width: 100%;
+  width:  clamp(180px, 20vw, 250px);
   height: 100%;
   border-radius: clamp(15px, 2vw, 25px);
   backface-visibility: hidden;
@@ -67,8 +68,8 @@
     position: absolute;
     top: clamp(5px, 1vw, 10px);
     right: clamp(5px, 1vw, 10px);
-    width: clamp(20px, 5vw, 40px);
-    height: clamp(20px, 5vw, 40px);
+    width: clamp(40px, 5vw, 40px);
+    height: clamp(40px, 5vw, 40px);
     transform: rotate(10deg);
     background-image: url("../../assets/elements/designsClose.png");
     background-repeat: no-repeat;

@@ -17,7 +17,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -75%);
-    font-size: 250px;
+    // font-size: 250px;
+    font-size: clamp(70px, 15vw, 250px);
     color: #ffffff;
     opacity: 0.1;
     text-shadow: 
@@ -35,7 +36,6 @@
     font-size: 24px;
 
     &::before {
-      font-size: 150px;
       top: 30%;
     }
   }
@@ -44,17 +44,13 @@
     height: 100px;
 
     &::before {
-      font-size: 100px;
       top: 22%;
     }
   }
 
   @media (max-width: 480px) {
           height: 80px;
-
-
     &::before {
-      font-size: 60px;
       top: 15%;
     }
   }
